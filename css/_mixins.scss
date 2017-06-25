@@ -1,0 +1,14 @@
+.background-cover-image{
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	background-repeat: no-repeat;
+  	background-position: center center fixed;
+}
+
+@mixin border-radius($pixels) {
+  	border-radius: $pixels;
+  	-webkit-border-radius:$pixels;
+  	-moz-border-radius:$pixels;
+}

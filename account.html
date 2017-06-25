@@ -1,0 +1,308 @@
+<!-- page header -->
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+
+<title>Hostino</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/slick.css"> -->
+<link rel="stylesheet" type="text/css" href="css/customize.css?<?= "wstex"; ?> ">
+<link rel="stylesheet" type="text/css" href="css/dashboard.css?<?= "wseg"; ?> ">
+</head>
+<body>
+
+
+<!-- page navigation -->
+    <nav id="nav" class="navbar navbar-default navbar-full dashboard-nav ">
+        <div class="container container-nav">
+            <div class="navbar-header">
+                <button aria-expanded="false" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="index.html">
+                    <img class="logo" src="images/_logo.png" alt="epower">
+                </a>
+            </div>
+            <div style="height: 1px;" role="main" aria-expanded="false" class="navbar-collapse collapse" id="bs">
+                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="account.html">Account</a></li>
+                    <li><a class="signin-button">Jane Doe </a></li>
+<!--                     <li> <img class="img-responsive img-circle header_avatar" src="images/drupal.png" /> </li>
+ -->                    <li><a class="">Log out </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+<!-- page content container -->
+	<div class="container">
+		
+<!-- 		<div class="row">
+			<div class="jumbotron jumbo-info">
+				<h3> <i class="fa fa-lightbulb-o lightbualb "> </i> Get what you Pay for </h3>
+					<p> Phasellus consectetuer vestibulum elit. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue.</p>
+			</div>
+		</div> -->
+
+		<div class="row">
+			<ol class="breadcrumb dashboard-breadcrumb">
+	  			<li><a href="/">Epower</a></li>
+	  			<li> <a href="dashboad.html"> John Doe </a> </li>
+	    		<li class="active"> Account  </li>
+			</ol>
+		</div>
+
+
+        <div class="row">
+            <div class="col-md-4 col-md-push-8 " style="text-align: right;" >
+                <a href="purchase.html"> <button class="btn btn-orange"> Buy Now </button> </a>
+            </div>
+        </div>
+
+
+
+
+
+		<div class="row main-section"> <!-- section -->
+			<div class="col-md-3"> <!-- user profile hold !-->
+				                <div class="row">
+                    <div class="profile-details">
+                        <span class="thumbnail">
+                            <img class="img-responsive img-circle" src="images/profile_photo1.jpg" />
+                        </span>
+
+                        <span class="profile-desc">
+                            <p class="h3"> Jane Doe </p>
+                            <p> 2343-2345-2344-2345 </p>
+                        </span>
+                    </div>
+                </div> 
+			</div> <!-- end userprofile hold -->
+
+			<div class="col-md-8 col-md-push-1 "> <!-- main view!-->	
+				<div class="row">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="panel-title"> Update Account </div>
+            </div>  
+            <div class="panel-body" >
+
+                    <form  class="form-horizontal" method="post" >
+                        <h3> Basic </h3>
+                        <input type='hidden' name='csrfmiddlewaretoken' value='XFe2rTYl9WOpV8U6X5CfbIuOZOELJ97S' />
+
+
+                        <div id="div_id_meterid" class="form-group required">
+                            <label for="div_id_meterid" class="control-label col-md-4  requiredField"> Fullname <span class="asteriskField"> *</span>   </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md  textinput textInput form-control" id="div_id_meterid" maxlength="30" name="custom" placeholder="Full name" style="margin-bottom: 10px" type="text" />
+                            </div>
+                        </div>
+
+                        <div id="id_phone" class="form-group required">
+                            <label for="id_ammount" class="control-label col-md-4  requiredField"> Contact Phone number</label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md emailinput form-control" id="id_phone" name="phone" placeholder="Amount" style="margin-bottom: 10px" type="email" />
+                            </div>     
+                        </div>
+
+                        <div id="id_phone" class="form-group required">
+                            <label for="id_ammount" class="control-label col-md-4  requiredField">Contact Email address </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md emailinput form-control" id="id_email" name="email" placeholder="Amount" style="margin-bottom: 10px" type="email" />
+                            </div>     
+                        </div>
+
+
+                        <div class="form-group"> 
+                            <div class="aab controls col-md-4 "></div>
+                                <div class="controls col-md-8 ">
+                                    <input type="submit" name="Signup" value="save" class="btn btn-primary btn btn-info" id="submit-id-signup" />
+                                </div>
+                        </div> 
+                    </form>
+
+                    <form  class="form-horizontal" method="post" >
+                        <h3> Account </h3>
+                        <input type='hidden' name='csrfmiddlewaretoken' value='XFe2rTYl9WOpV8U6X5CfbIuOZOELJ97S' />
+
+                        
+
+                        <div id="div_acnt_phone" class="form-group required">
+                            <label for="div_id_meterid" class="control-label col-md-4  requiredField"> Account phone number  </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md  textinput textInput form-control" disabled="true" id="div_id_meterid" maxlength="30" name="custom" value="+2348099457837" placeholder="" style="margin-bottom: 10px" type="text" />
+                            </div>
+                        </div>
+
+                        <p class="h4"> Change password </p>
+                        <div id="id_ammount" class="form-group required">
+                            <label for="id_ammount" class="control-label col-md-4  requiredField">Old password<span class="asteriskField"> *</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md emailinput form-control" id="id_email" name="email"  style="margin-bottom: 10px" type="password" />
+                            </div>     
+                        </div>
+
+                        <div id="id_ammount" class="form-group required">
+                            <label for="id_ammount" class="control-label col-md-4  requiredField">New password<span class="asteriskField"> *</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md emailinput form-control" id="id_email" name="email"  style="margin-bottom: 10px" type="password" />
+                            </div>     
+                        </div>
+
+                        <div class="form-group"> 
+                            <div class="aab controls col-md-4 "></div>
+                            <div class="controls col-md-8 ">
+                                <input type="submit" name="Signup" value="Change" class="btn btn-primary btn btn-info" id="submit-id-signup" />
+                            </div>
+                        </div> 
+                    </form>
+
+
+                    <form  class="form-horizontal" method="post" >
+                        <h3> Manage Meters </h3>
+<div class="table-responsive"> 
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>S/N</th>
+                                                <th>Meter ID </th>
+                                                <th> Name </th>
+                                                <th> Added </th>
+                                                <th> Action </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>5555-4444-3333-4555-3325</td>
+                                                <td> Home </td>
+                                                <td> thur, June 17 2017 </td>
+                                                <td> <button class="btn btn-danger"> Delete </button> </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>5555-4444-3333-4555-3325</td>
+                                                <td> Office </td>
+                                                <td> Wed, may 22 2017 </td>
+                                                <td> <button class="btn btn-danger"> Delete </button> </td>
+
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>3345-3324-2345-2214</td>
+                                                <td> Hostels </td>
+                                                <td>sat, march 17 2017</td>
+                                                <td> <button class="btn btn-danger"> Delete </button> </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td></td>
+                                                <td><input type="text" class="form-control" name="meter-number" placeholder="meternumber" />  </td>
+                                                <td><input type="text" name="meter-name" class="form-control" placeholder="meter name" />   </td>
+                                                <td><input type="text" name="meter-number" class="form-control" value="sun, jun 06 2017" />  </td>
+                                                <td> <button class="btn btn-primary"> Add new </button> </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                    </form>
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+				</div><!-- end row !-->
+			</div><!-- col-8 end main view  -->
+		</div><!-- row section -->
+    </div> <!--container -->
+
+
+
+		<div id="footer" class="container-fluid">
+<div class="container">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-3 col-md-3">
+                        <div class="footer-menu-holder">
+                            <h4>Company</h4>
+                            <ul class="footer-menu">
+                                <li><a href="genericpages.html">About us</a></li>
+                                <li><a href="genericpages.html">News</a></li>
+                                <li><a href="genericpages.html">FAQ</a></li>
+                                <li><a href="genericpages.html">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 col-md-3">
+                        <div class="footer-menu-holder">
+                            <h4>Services</h4>
+                            <ul class="footer-menu">
+                                <li><a href="genericpages.html">Bla bla</a></li>
+                                <li><a href="genericpages.html">More lipsium </a></li>
+                                <li><a href="genericpages.html">ipsium dolor</a></li>
+                                <li><a href="genericpages.html">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 col-md-3">
+                        <div class="footer-menu-holder">
+                            <h4>Other links</h4>
+                            <ul class="footer-menu">
+                                <li><a href="genericpages.html">Customer Portal</a></li>
+                                <li><a href="genericpages.html">Support Portal</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 col-md-3">
+                        <div class="address-holder">
+                            <div class="phone"><i class="fa fa-phone"></i> +234 900 38502</div>
+                            <div class="email"><i class="fa fa-envelope"></i> hello@hostino.io</div>
+                            <div class="address">
+                                <i class="fa fa-map-marker"></i> 
+                                <div>Bla<br>
+                                    Road 398, Block 125<br>
+                                    The City Avenue<br>
+                                    Office 38, floor 3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!--                <div class="social row">
+                    <div class="col-xs-2"><a href="#"><i class="fa fa-facebook"></i></a></div>
+                    <div class="col-xs-2"><a href="#"><i class="fa fa-twitter"></i></a></div>
+                    <div class="col-xs-2"><a href="#"><i class="fa fa-youtube-play"></i></a></div>
+                    <div class="col-xs-2"><a href="#"><i class="fa fa-behance"></i></a></div>
+                    <div class="col-xs-2"><a href="#"><i class="fa fa-dribbble"></i></a></div>
+                    <div class="col-xs-2"><a href="#"><i class="fa fa-pinterest-p"></i></a></div>
+                </div> -->
+            </div>
+		</div>
+
+
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.js"></script>
+<!-- <script src="js/slick.min.js"></script>
+<script src="js/paper-full.min.js"></script>
+<script type="text/paperscript" src="js/metaball.js" data-paper-canvas="infobg"></script>
+<script src="js/main.js"></script> -->
+</body>
+</html>

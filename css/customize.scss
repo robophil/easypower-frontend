@@ -1,0 +1,540 @@
+@import 'mixins';
+
+/*------------------------------------------------------------------
+	1. General Styles
+-------------------------------------------------------------------*/
+html,body{
+    height: 100%;
+}
+*,body{
+    // -webkit-transition: all 0.3s ease 0.0s;
+    // -moz-transition: all 0.3s ease 0.0s;
+    // transition: all 0.3s ease 0.0s;
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a,a:active,a:focus,a:hover{
+    text-decoration: none;
+}
+
+a > button,a > button:hover,a button:focus{
+    color: #fff;
+}
+
+a button:hover{
+    color: #fff;
+}
+
+li{
+    list-style-type: none;
+}
+
+*, input, button {
+    outline:none;
+}
+.rtl-cols div[class^="col-"] {
+    float: right;
+}
+
+input[type="text"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.border{
+    border: 1px solid red;
+}
+
+/*------------------------------------------------------------------
+	2. Header Section Styles
+-------------------------------------------------------------------*/
+.logo{
+    width: 97px;
+    margin-top: 10px;
+}
+
+#nav{
+    background-color: #ffffff;
+}
+.navbar{
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #7f888f;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    padding: 28px 8px;
+}
+
+.navbar-default .navbar-nav>li>img{
+    //margin-top: 1px;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+    color: #0397ff;
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:focus, 
+.navbar-default .navbar-nav > .active > a:hover{
+    color: #0397ff;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav>li>a.signin-button{
+    color: #0397ff;
+}
+.navbar-default .navbar-nav>li>a.signin-button:hover,
+.navbar-default .navbar-nav>li>a.login-button:focus {
+    color: #1584d3;
+}
+
+
+.navbar-default .navbar-nav>li>a.chat-button:hover,
+.navbar-default .navbar-nav>li>a.chat-button:focus{
+    background-color: #03dc62;
+    -webkit-box-shadow: 0 3px 5px 0 rgba(0, 216, 95, 0.38);
+    -moz-box-shadow: 0 3px 5px 0 rgba(0, 216, 95, 0.38);
+    box-shadow: 0 3px 5px 0 rgba(0, 216, 95, 0.38);
+    margin-top: 33px;
+}
+@media (min-width: 768px){
+    .navbar-nav>li>a {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+.navbar-brand {
+    height: 65px;
+    //padding: 10px 8px;
+}
+
+.navbar-default .navbar-toggle{
+    border: 0px;
+}
+
+.navbar-default .navbar-toggle .icon-bar{
+    background-color: #0397ff;
+}
+
+.navbar-default .navbar-toggle:focus, 
+.navbar-default .navbar-toggle:hover{
+    background-color: transparent;
+    opacity: 0.7;
+}
+
+.navbar-toggle{
+    margin-top: 17px;
+}
+
+.navbar-right .dropdown-menu {
+    left: 0;
+    right: auto;
+}
+
+#nav .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#nav .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 160px;
+    border: 0;
+    top: 70px;
+    padding: 12px 11px;
+    border-radius: 12px;
+    -webkit-box-shadow: 0 5px 35px 0 rgba(70, 187, 255, 0.23);
+    -moz-box-shadow: 0 5px 35px 0 rgba(70, 187, 255, 0.23);
+    box-shadow: 0 5px 35px 0 rgba(70, 187, 255, 0.23);
+}
+#nav .dropdown-menu > li > a{
+    color: #7f888f;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    display: block;
+    padding: 3px 11px;
+    border-radius: 10px;
+}
+#nav .dropdown-menu > li > a:focus, 
+#nav .dropdown-menu > li > a:hover{
+    color: #6c84af;
+    background-color: #f9fbff;
+    /*text-shadow: 0px 0px 2px #6c84af;*/
+}
+#nav .dropdown:hover .dropdown-menu ,
+#nav .dropdown:focus .dropdown-menu {
+    display: block;
+}
+.fullpage .dropdown-menu {
+    background-color: #ffffff;
+    height: 200px;
+    border: 0;
+    padding: 12px 11px;
+    border-radius: 12px;
+    -webkit-box-shadow: 0 5px 35px 0 rgba(70, 187, 255, 0.23);
+    -moz-box-shadow: 0 5px 35px 0 rgba(70, 187, 255, 0.23);
+    box-shadow: 0 5px 35px 0 rgba(70, 187, 255, 0.23);
+}
+.fullpage .dropdown-menu > li > a{
+    color: #7f888f;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 3px 11px;
+    border-radius: 10px;
+}
+.fullpage .dropdown-menu > li > a:focus, 
+.fullpage .dropdown-menu > li > a:hover{
+    color: #6c84af;
+    background-color: #f9fbff;
+}
+
+
+
+
+
+
+.bg-cover{
+	background : url(../images/bgmain.jpg) no-repeat center center fixed !important; 
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	color : #fff;
+  	padding: 20px;
+}
+
+.call-to-action{
+	margin-top : 50px;
+	height : 300px;
+}
+
+.access-box{
+	background-color : #fff;
+	padding : 15px 10px 15px 10px;
+	margin-top : 10px;
+}
+
+	.form-hold{
+		background-color: #fff;
+		//text-align: center;
+		padding: 15px 30px 15px 30px ;
+		margin-bottom: 25px;
+		//border: 1px solid #ccc;
+		z-index:1;
+		@include border-radius(5px);
+		position: relative;
+
+
+		input{
+			@include border-radius(0px);
+			border: 1px solid #ccc;
+			background-color: #fff;
+		}
+
+		input:focus{
+			box-shadow: none;
+			border: 1px solid #ccc;
+		}
+
+		form{
+			padding: 0px 30px 0px 30px;
+		}
+
+		button[type="submit"]{
+			//width: 100%;
+			//background-color: cornflowerblue;
+			color: #fff;
+		}
+
+	}
+
+
+
+
+.brand{
+    font-size: 1em;
+    font-weight: bolder;
+    color: #000000;
+}
+
+
+.footer .social-icons{
+        //float: right;
+        padding: 0px;
+        text-align: right;
+        font-weight: bold;
+        font-size: 18px;
+}
+
+.footer .links{
+        //float: left;
+        padding: 0px;
+}
+
+
+
+
+.btn-green{
+    background-color: #006600;
+}
+
+.btn-blue{
+    background-color: cornflowerblue;
+}
+
+
+.btn-orange{
+        background: #FF8008;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #FFC837, #FF8008);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #FFC837, #FF8008); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+
+
+
+/*------------------------------------------------------------------
+    11. Footer Section Styles
+-------------------------------------------------------------------*/
+#footer{
+    background-color: #fff;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    text-align: center;
+    margin-top: 120px;
+    background-color: #f9f9f9;
+
+}
+#footer .footer-menu-holder{
+    display: inline-block;
+    text-align: left;
+    min-width: 130px;
+}
+#footer .address-holder{
+    display: inline-block;
+    text-align: left;
+}
+#footer h4 {
+    font-size: 17px;
+    color: #000;
+    margin: 0;
+    margin-bottom: 18px;
+    font-weight: 800;
+}
+#footer ul.footer-menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#footer ul.footer-menu li{
+    margin-bottom: 3px;
+}
+#footer ul.footer-menu li a{
+    color: #666;
+    font-size: 15px;
+}
+#footer ul.footer-menu li a:hover,
+#footer ul.footer-menu li a:focus,
+#footer ul.footer-menu li.active a{
+    color: #666;
+    text-decoration: none;
+}
+#footer p{
+    color: #666;
+    font-size: 15px;
+}
+#footer .phone{
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+#footer .phone .fa{
+    color: #666;
+    font-size: 22px;
+    width: 20px;
+    margin-right: 7px;
+    text-align: center;
+    vertical-align: middle;
+}
+#footer .phone a{
+    color: #666;
+}
+#footer .email{
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 13px;
+}
+#footer .email .fa{
+    color: #666;
+    font-size: 17px;
+    width: 20px;
+    margin-right: 7px;
+    text-align: center;
+}
+#footer .address{
+    margin-bottom: 30px;
+}
+#footer .address div{
+    display: inline-block;
+    color: #666;
+    font-size: 15px;
+}
+#footer .address .fa{
+    color: #666;
+    font-size: 25px;
+    width: 20px; 
+    margin-right: 7px;
+    text-align: center;
+    vertical-align: top;
+}
+#footer .social{
+    margin-top: 40px;
+}
+#footer .social a{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+#footer .social a .fa{
+    color: #999;
+    font-size: 40px;
+    text-align: center;
+}
+#footer .social a:hover .fa,
+#footer .social a:focus .fa{
+    color: #333;
+}
+
+/*************************************************************
+
+
+Sign up progress 
+
+**************************************************************/
+
+/* Global CSS, you probably don't need that */
+
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+}
+
+
+.wrapper {
+    display: table-cell;
+    height: 40px;
+    vertical-align: middle;
+}
+
+.nav {
+    margin-top: 40px;
+}
+
+.pull-right {
+    float: right;
+}
+
+a, a:active {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #999;
+}
+
+/* Breadcrups CSS */
+
+.arrow-steps .step {
+    font-size: 14px;
+    text-align: center;
+    color: #666;
+    cursor: default;
+    margin: 0 3px;
+    padding: 10px 10px 10px 30px;
+    min-width: 180px;
+    float: left;
+    position: relative;
+    background-color: #ff8008;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; 
+  transition: background-color 0.2s ease;
+  margin-bottom: 15px;
+}
+
+.arrow-steps .step:after,
+.arrow-steps .step:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: -17px;
+    width: 0;
+    height: 0;
+    border-top: 19px solid transparent;
+    border-bottom: 17px solid transparent;
+    border-left: 17px solid #ff8008;    
+    z-index: 2;
+  transition: border-color 0.2s ease;
+}
+
+.arrow-steps .step:before {
+    right: auto;
+    left: 0;
+    border-left: 17px solid #fff;   
+    z-index: 0;
+}
+
+.arrow-steps .step:first-child:before {
+    border: none;
+}
+
+.arrow-steps .step:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.arrow-steps .step span {
+    position: relative;
+}
+
+.arrow-steps .step span:before {
+    opacity: 0;
+    content: "✔";
+    position: absolute;
+    top: -2px;
+    left: -20px;
+}
+
+.arrow-steps .step.done span:before {
+    opacity: 1;
+    -webkit-transition: opacity 0.3s ease 0.5s;
+    -moz-transition: opacity 0.3s ease 0.5s;
+    -ms-transition: opacity 0.3s ease 0.5s;
+    transition: opacity 0.3s ease 0.5s;
+}
+
+.arrow-steps .step.current {
+    color: #fff;
+    background-color: #23468c;
+}
+
+.arrow-steps .step.current:after {
+    border-left: 17px solid #23468c;    
+}

@@ -1,0 +1,227 @@
+<!-- page header -->
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+
+<title>Hostino</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<!-- <link rel="stylesheet" type="text/css" href="css/slick.css"> -->
+<link rel="stylesheet" type="text/css" href="css/customize.css?<?= "wstex"; ?> ">
+<link rel="stylesheet" type="text/css" href="css/dashboard.css?<?= "wseg"; ?> ">
+</head>
+<body>
+
+<!-- page navigation -->
+    <nav id="nav" class="navbar navbar-default navbar-full dashboard-nav ">
+        <div class="container container-nav">
+            <div class="navbar-header">
+                <button aria-expanded="false" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="index.html">
+                    <img class="logo" src="images/_logo.png" alt="epower">
+                </a>
+            </div>
+            <div style="height: 1px;" role="main" aria-expanded="false" class="navbar-collapse collapse" id="bs">
+                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="account.html">Account</a></li>
+                    <li><a class="signin-button">Jane Doe </a></li>
+<!--                     <li> <img class="img-responsive img-circle header_avatar" src="images/drupal.png" /> </li>
+ -->                    <li><a class="">Log out </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!-- page content container -->
+	<div class="container">
+		
+<!-- 		<div class="row">
+			<div class="jumbotron jumbo-info">
+				<h3> <i class="fa fa-lightbulb-o lightbualb "> </i> Get what you Pay for </h3>
+					<p> Phasellus consectetuer vestibulum elit. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit amet augue.</p>
+			</div>
+		</div> -->
+
+		<div class="row">
+			<ol class="breadcrumb dashboard-breadcrumb">
+	  			<li><a href="#">Epower</a></li>
+	  			<li> <a href="#"> John Doe </a> </li>
+	    		<li class="active"> Buy Token  </li>
+			</ol>
+		</div>
+
+
+
+		<div class="row main-section"> <!-- section -->
+			<div class="col-md-3"> <!-- user profile hold !-->
+				                <div class="row">
+                    <div class="profile-details">
+                        <span class="thumbnail">
+                            <img class="img-responsive img-circle" src="images/profile_photo1.jpg" />
+                        </span>
+
+                        <span class="profile-desc">
+                            <p class="h3"> Jane Doe </p>
+                            <p> 2343-2345-2344-2345 </p>
+                        </span>
+                    </div>
+                </div> 
+			</div> <!-- end userprofile hold -->
+
+			<div class="col-md-8 col-md-push-1 "> <!-- main view!-->	
+				<div class="row">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <div class="panel-title">Buy Token</div>
+            </div>  
+            <div class="panel-body" >
+
+                <form method="post" action="summary.html">
+                    <input type='hidden' name='csrfmiddlewaretoken' value='XFe2rTYl9WOpV8U6X5CfbIuOZOELJ97S' />
+                            
+
+                    <form  class="form-horizontal" method="post" >
+                        <input type='hidden' name='csrfmiddlewaretoken' value='XFe2rTYl9WOpV8U6X5CfbIuOZOELJ97S' />
+
+                        <div id="div_id_select" class="form-group required">
+                            <label for="id_select"  class="control-label col-md-4  requiredField"> Choose account</label>
+
+                            <div class="controls col-md-8 "  style="margin-bottom: 10px">
+											<select class="selectpicker">
+											  <option> Select an account </option>
+											  <option> Home </option>
+											  <option> Office </option>
+											  <option> Hostels </option>
+											  <option> Block B </option>
+											</select>
+                            </div>
+
+                        </div> 
+
+
+                        <div class="form-group">
+                            <div class="controls col-md-offset-4 col-md-8 ">
+                                <div id="div_id_terms" class="checkbox required">
+                                    <label for="id_terms" class=" requiredField">
+                                         <input class="input-ms checkboxinput" id="id_terms" name="terms" style="margin-bottom: 10px" type="checkbox" />
+                                         Use custom account
+                                    </label>
+                                </div> 
+                                    
+                            </div>
+                        </div> 
+
+                        <div id="div_id_meterid" class="form-group required">
+                            <label for="div_id_meterid" class="control-label col-md-4  requiredField"> Custom  </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md  textinput textInput form-control" disabled="true" id="div_id_meterid" maxlength="30" name="custom" placeholder="Enter meter Id" style="margin-bottom: 10px" type="text" />
+                            </div>
+                        </div>
+
+                        <div id="id_ammount" class="form-group required">
+                            <label for="id_ammount" class="control-label col-md-4  requiredField"> Ammount<span class="asteriskField">*</span> </label>
+                            <div class="controls col-md-8 ">
+                                <input class="input-md emailinput form-control" id="id_email" name="email" placeholder="Amount" style="margin-bottom: 10px" type="email" />
+                            </div>     
+                        </div>
+                       
+                       
+
+                        <div class="form-group"> 
+                            <div class="aab controls col-md-4 "></div>
+                            <div class="controls col-md-8 ">
+                                <input type="submit" name="Signup" value="Proceed" class="btn btn-primary btn btn-info" id="submit-id-signup" />
+                            </div>
+                        </div> 
+                            
+                    </form>
+
+                </form>
+            </div>
+        </div>
+
+    </div> <!--container -->
+				</div><!-- end row !-->
+			</div><!-- col-8 end main view  -->
+		</div><!-- row section -->
+
+
+		<div id="footer" class="container-fluid">
+<div class="container">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-3 col-md-3">
+                        <div class="footer-menu-holder">
+                            <h4>Company</h4>
+                            <ul class="footer-menu">
+                                <li><a href="genericpages.html">About us</a></li>
+                                <li><a href="genericpages.html">News</a></li>
+                                <li><a href="genericpages.html">FAQ</a></li>
+                                <li><a href="genericpages.html">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 col-md-3">
+                        <div class="footer-menu-holder">
+                            <h4>Services</h4>
+                            <ul class="footer-menu">
+                                <li><a href="genericpages.html">Bla bla</a></li>
+                                <li><a href="genericpages.html">More lipsium </a></li>
+                                <li><a href="genericpages.html">ipsium dolor</a></li>
+                                <li><a href="genericpages.html">Contact us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 col-md-3">
+                        <div class="footer-menu-holder">
+                            <h4>Other links</h4>
+                            <ul class="footer-menu">
+                                <li><a href="genericpages.html">Customer Portal</a></li>
+                                <li><a href="genericpages.html">Support Portal</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-3 col-md-3">
+                        <div class="address-holder">
+                            <div class="phone"><i class="fa fa-phone"></i> +234 900 38502</div>
+                            <div class="email"><i class="fa fa-envelope"></i> hello@hostino.io</div>
+                            <div class="address">
+                                <i class="fa fa-map-marker"></i> 
+                                <div>Bla<br>
+                                    Road 398, Block 125<br>
+                                    The City Avenue<br>
+                                    Office 38, floor 3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!--                <div class="social row">
+                    <div class="col-xs-2"><a href="#"><i class="fa fa-facebook"></i></a></div>
+                    <div class="col-xs-2"><a href="#"><i class="fa fa-twitter"></i></a></div>
+                    <div class="col-xs-2"><a href="#"><i class="fa fa-youtube-play"></i></a></div>
+                    <div class="col-xs-2"><a href="#"><i class="fa fa-behance"></i></a></div>
+                    <div class="col-xs-2"><a href="#"><i class="fa fa-dribbble"></i></a></div>
+                    <div class="col-xs-2"><a href="#"><i class="fa fa-pinterest-p"></i></a></div>
+                </div> -->
+            </div>
+		</div>
+
+
+
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.js"></script>
+<!-- <script src="js/slick.min.js"></script>
+<script src="js/paper-full.min.js"></script>
+<script type="text/paperscript" src="js/metaball.js" data-paper-canvas="infobg"></script>
+<script src="js/main.js"></script> -->
+</body>
+</html>
